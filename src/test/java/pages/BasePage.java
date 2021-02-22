@@ -12,7 +12,7 @@ public abstract class BasePage {
 
 
     @FindBy(xpath ="//button[@class='btn btn-primary cucumber-cookie-banner-accept-btn _cookie-banner-opt-in_1hvnco']")
-    public WebElement angebot;
+    public WebElement cookieBanner;
 
     @FindBy(css= "span._title_ojnkb3._override_ojnkb3")
     public WebElement privat;
@@ -28,12 +28,12 @@ public abstract class BasePage {
         //ant time we are verifying page name, or page subtitle, loader mask appears
         waitUntilLoaderScreenDisappear();
 //        BrowserUtils.waitForStaleElement(pageSubTitle);
-        return angebot.getText();
+        return cookieBanner.getText();
     }
     public void waitUntilLoaderScreenDisappear() {
         try {
             WebDriverWait wait = new WebDriverWait(Driver.get(), 5);
-            wait.until(ExpectedConditions.invisibilityOf(angebot));
+            wait.until(ExpectedConditions.invisibilityOf(cookieBanner));
         } catch (Exception e) {
             e.printStackTrace();
         }
