@@ -12,9 +12,12 @@ public abstract class BasePage {
 
 
     @FindBy(xpath ="//button[@class='btn btn-primary cucumber-cookie-banner-accept-btn _cookie-banner-opt-in_1hvnco']")
-    public WebElement cookieBanner;
+    public WebElement akzeptieren;
 
-    @FindBy(css= "span._title_ojnkb3._override_ojnkb3")
+    @FindBy(xpath ="//*[@id=\"ember4\"]/div/div/div/header/nav/ul[1]/li[4]/a")
+    public WebElement Angebote;
+
+    @FindBy(xpath = "//*[@id=\"ember4\"]/div/div/div/main/div[2]/div[3]/div/div[2]/div/span[1]")
     public WebElement privat;
 
     @FindBy(css = "[id^='ember19']")
@@ -28,12 +31,12 @@ public abstract class BasePage {
         //ant time we are verifying page name, or page subtitle, loader mask appears
         waitUntilLoaderScreenDisappear();
 //        BrowserUtils.waitForStaleElement(pageSubTitle);
-        return cookieBanner.getText();
+        return akzeptieren.getText();
     }
     public void waitUntilLoaderScreenDisappear() {
         try {
             WebDriverWait wait = new WebDriverWait(Driver.get(), 5);
-            wait.until(ExpectedConditions.invisibilityOf(cookieBanner));
+            wait.until(ExpectedConditions.invisibilityOf(akzeptieren));
         } catch (Exception e) {
             e.printStackTrace();
         }

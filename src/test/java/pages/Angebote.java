@@ -12,6 +12,9 @@ public class Angebote extends BasePage {
         PageFactory.initElements(Driver.get(), this);
     }
 
+    @FindBy(xpath ="//*[@id=\"ember4\"]/div/div/div/header/nav/ul[1]/li[4]/a")
+    public WebElement Angebote;
+
 
 
 
