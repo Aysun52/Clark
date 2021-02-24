@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class Privathaftpflicht extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"ember4\"]/div/div/div/main/div[2]/div[3]/div/div[2]/div/span[1]")
@@ -11,21 +13,50 @@ public class Privathaftpflicht extends BasePage {
     @FindBy(css = "[id^='ember19']")
     public WebElement weiter;
 
-    @FindBy(xpath ="//*[@id=\"radioButtonsSingleSelect\"]/li[1]/h2")
+    //@FindBy(id ="Single")
+    //public WebElement Single;
+
+    @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[1]/div")
     public WebElement Single;
 
-    @FindBy(xpath ="//body/div[@id='ember4']/div[1]/div[1]/div[1]/main[1]/div[3]/section[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/h2[1]")
-    public WebElement FamilieMitKinder;
+    // @FindBy (className="radioButtonsSingleSelect")
+    //public List<WebElement> radiobuttons;
 
-    @FindBy(xpath ="//*[@id=\"radioButtonsSingleSelect\"]/li[3]/h2")
-    public WebElement Paar_ohne_Kind;
+    @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[2]")
+    public WebElement Paar;
 
-    @FindBy(xpath ="//*[@id=\"radioButtonsSingleSelect\"]/li[4]/h2")
-    public WebElement Single_mit_Kind;
-
-    @FindBy(css = "h2.questionnaire__answers__answer__title")
-    public WebElement questinnaire;
-
-    @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[1]/h2")
+    @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[1]/div")
     public WebElement ja;
+
+    @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[2]/div")
+    public WebElement Nein;
+
+    @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[1]/div")
+    public WebElement Lebensjahr;
+
+    @FindBy(xpath = "//*[@id=\"ember4\"]/div/div/div/main/div[3]/div/div/button[2]")
+    public WebElement Angebote_anfordern;
+
+    @FindBy(css = "span._block_dsfphm")
+    public WebElement DeinAngebote;
+
 }
+   /* public void setRadiobuttons() throws InterruptedException{
+for (WebElement SelectionRadioButtons : radiobuttons){
+    System.out.println(SelectionRadioButtons.getText());
+}
+
+    }
+}*/
+
+    /*
+
+    public void getAvailableProducts() throws InterruptedException {
+        for (int i = 0; i < radiobuttons.size(); i++) {
+            radiobuttons.get(i).click();
+            Thread.sleep(1000);
+
+        }
+
+    }
+     */
