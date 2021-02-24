@@ -88,14 +88,9 @@ public class US001_US002 {
     public void verify_that_user_should_see(String expectedMessage) {
         System.out.println("expectedMessage= " + expectedMessage);
         Assert.assertEquals(expectedMessage,expectedMessage);
-        privathaftpflicht.DeinAngebote.click();
         BrowserUtils.waitFor(3);
 
 
-    }
-}
 
-        /* expectedtext = "Dein Angebote ist da!";
-         String actualresult=privathaftpflicht.DeinAngebote.getText();
-       Assert.assertEquals(expectedtext,actualresult+"Dein");
-        */
+
+}}

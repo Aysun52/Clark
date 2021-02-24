@@ -37,18 +37,12 @@ public class Privathaftpflicht extends BasePage {
     @FindBy(xpath = "//*[@id=\"ember4\"]/div/div/div/main/div[3]/div/div/button[2]")
     public WebElement Angebote_anfordern;
 
+
     @FindBy(css = "span._block_dsfphm")
-    public WebElement DeinAngebote;
+    public WebElement zumAngebote;
+
 
 }
-   /* public void setRadiobuttons() throws InterruptedException{
-for (WebElement SelectionRadioButtons : radiobuttons){
-    System.out.println(SelectionRadioButtons.getText());
-}
-
-    }
-}*/
-
     /*
 
     public void getAvailableProducts() throws InterruptedException {

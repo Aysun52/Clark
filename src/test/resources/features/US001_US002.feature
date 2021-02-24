@@ -12,3 +12,7 @@ Feature:Dashboard Page
     And the user is on the 4th question
     Then the user press "Angeboteanfordern"
     And verify that user should see "Dein Angebote ist da!"
+
+
+    When click on "Zum Angebote"
+    Then the user see "Deine Angebote zur Privathaftplicht"  page for recommended insurances
