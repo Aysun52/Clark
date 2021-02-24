@@ -58,6 +58,16 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
+  "name": "the user  click on \"Loslegen\" button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "step_definitions.US001_US002.the_user_click_on_button(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
   "name": "the user is on the 1st question",
   "keyword": "When "
 });
@@ -102,7 +112,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "step_definitions.US001_US002.the_user_press(java.lang.String)"
+  "location": "step_definitions.US003_US004.the_user_press(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -112,7 +122,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "step_definitions.US001_US002.verify_that_user_should_see(java.lang.String)"
+  "location": "step_definitions.US003_US004.verify_that_user_should_see(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -133,6 +143,16 @@ formatter.step({
 });
 formatter.match({
   "location": "step_definitions.US003_US004.the_user_see_page_for_recommended_insurances(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user press on recommended insurance \"Jetzt abschliessen\" button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "step_definitions.US003_US004.the_user_press_on_recommended_insurance_button(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

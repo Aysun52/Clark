@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import javax.swing.plaf.PanelUI;
 import java.util.List;
 
 public class Privathaftpflicht extends BasePage {
@@ -11,10 +12,8 @@ public class Privathaftpflicht extends BasePage {
     public WebElement privat;
 
     @FindBy(css = "[id^='ember19']")
-    public WebElement weiter;
+    public WebElement loslegen;
 
-    //@FindBy(id ="Single")
-    //public WebElement Single;
 
     @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[1]/div")
     public WebElement Single;
@@ -34,14 +33,27 @@ public class Privathaftpflicht extends BasePage {
     @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[1]/div")
     public WebElement Lebensjahr;
 
-    @FindBy(xpath = "//*[@id=\"ember4\"]/div/div/div/main/div[3]/div/div/button[2]")
-    public WebElement Angebote_anfordern;
+    @FindBy(xpath ="//*[@id=\"radioButtonsSingleSelect\"]/li[1]/h2")
+    public  WebElement Selbstbeteiligung;
 
+    @FindBy(css = "#ember4 > div > div > div > main > div.questionnaire__bg-container > div > div > button.btn.btn-primary.btn--arrow.btn--mobile-block.btn-next-split")
+    public WebElement Angebote_anfordern;
 
     @FindBy(css = "span._block_dsfphm")
     public WebElement zumAngebote;
 
+    @FindBy(css ="span._block_dsfphm")
+    public  WebElement recommendedinsurancebutton;
 
+
+    @FindBy(xpath ="//input[@type=\"email\"]")
+    public WebElement email;
+
+    @FindBy(xpath = "//input[@type=\"password\"]")
+    public WebElement password;
+
+    @FindBy(xpath="//*[@id=\"ember97\"]/span/span")
+    public WebElement registerbutton;
 }
     /*
 

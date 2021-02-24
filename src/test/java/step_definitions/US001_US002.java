@@ -6,7 +6,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en_scouse.An;
-//import org.graalvm.compiler.asm.sparc.SPARCAssembler;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import pages.Angebote;
@@ -48,49 +47,40 @@ public class US001_US002 {
     public void the_user_on_the_page(String Privathaftplicht) {
         privathaftpflicht.privat.click();
         BrowserUtils.waitFor(5);
-        privathaftpflicht.weiter.click();
+
+    }
+
+    @When("the user  click on {string} button")
+    public void the_user_click_on_button(String string) {
+        privathaftpflicht.loslegen.click();
         BrowserUtils.waitFor(3);
     }
 
     @When("the user is on the 1st question")
     public void the_user_is_on_the_1st_question() {
-
+        privathaftpflicht.ja.click();
         BrowserUtils.waitFor(3);
     }
 
     @When("the user is on the 2nd question")
     public void the_user_is_on_the_2nd_question() {
-        privathaftpflicht.ja.click();
-        BrowserUtils.waitFor(3);
-    }
-
-    @When("the user is on the 3rd question")
-    public void the_user_is_on_the_3rd_question() {
         privathaftpflicht.Nein.click();
         BrowserUtils.waitFor(3);
 
     }
 
-    @When("the user is on the 4th question")
-    public void the_user_is_on_the_4th_question() {
+    @When("the user is on the 3rd question")
+    public void the_user_is_on_the_3rd_question() {
         privathaftpflicht.Lebensjahr.click();
         BrowserUtils.waitFor(2);
     }
 
-    @Then("the user press {string}")
-    public void the_user_press(String string) {
-        privathaftpflicht.Angebote_anfordern.click();
+    @When("the user is on the 4th question")
+    public void the_user_is_on_the_4th_question() {
+        privathaftpflicht.Selbstbeteiligung.click();
         BrowserUtils.waitFor(2);
 
     }
 
-    @Then("verify that user should see {string}")
-    public void verify_that_user_should_see(String expectedMessage) {
-        System.out.println("expectedMessage= " + expectedMessage);
-        Assert.assertEquals(expectedMessage,expectedMessage);
-        BrowserUtils.waitFor(3);
 
-
-
-
-}}
+}
