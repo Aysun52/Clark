@@ -20,8 +20,17 @@ Feature:Dashboard Page
     Then the user see "Deine Angebote zur Privathaftplicht"  page for recommended insurances
 
     When the user press on recommended insurance "Jetzt abschliessen" button
-    And the user enters email
-    And the user enter password
-    Then the user press "Jetzt registrien" button
+    And the user enters "dummydummy95867@gmail.com" and "Clark123132" follow by registration
+
+  Scenario: Registration Page
+    When the user select gender on registration info page
+    And the user input "<firstName>" "<lastName>" "<street>" "<houseNumber>" "<zipCode>" "<city>" "<birthDate>" "<telephoneNumber>"
+      | firstName | lastName | street           | houseNumber | zipCode | city      | birthDate  | telephoneNumber |
+      | Helen    | Yolk     | Frankfurt Street |8            | 60306   | Frankfurt |05/09/1990  |015229320777     |
+
+    Then the user click on "Weiter" button
+
+
+
 
 

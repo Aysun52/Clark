@@ -14,7 +14,6 @@ public class Privathaftpflicht extends BasePage {
     @FindBy(css = "[id^='ember19']")
     public WebElement loslegen;
 
-
     @FindBy(xpath = "//*[@id=\"radioButtonsSingleSelect\"]/li[1]/div")
     public WebElement Single;
 
@@ -42,18 +41,10 @@ public class Privathaftpflicht extends BasePage {
     @FindBy(css = "span._block_dsfphm")
     public WebElement zumAngebote;
 
-    @FindBy(css ="span._block_dsfphm")
+    @FindBy(xpath ="//button[@class='ember-view _button_dsfphm _appearance-primary_dsfphm _size-slim_dsfphm cucumber-offer-details-bestellen-button _cta_15tkx4']")
     public  WebElement recommendedinsurancebutton;
 
 
-    @FindBy(xpath ="//input[@type=\"email\"]")
-    public WebElement email;
-
-    @FindBy(xpath = "//input[@type=\"password\"]")
-    public WebElement password;
-
-    @FindBy(xpath="//*[@id=\"ember97\"]/span/span")
-    public WebElement registerbutton;
 }
     /*
 
